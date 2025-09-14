@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramesh Kumar - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/lucide-icons/dist/lucide.min.js"></script>
+  <!-- Devicon for tech logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    .text-gradient {
+      background: linear-gradient(90deg, #06b6d4, #a855f7, #f43f5e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-in-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white">
+  <!-- Background Particles -->
+  <canvas id="bg"></canvas>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 p-4 glass">
+    <nav class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold text-cyan-400 hover:text-white">Ramesh Kumar</a>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#projects" class="hover:text-cyan-400">Projects</a>
+        <a href="#resume" class="hover:text-cyan-400">Resume</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 md:px-8 mt-20">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center relative">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-gradient mb-6 animate-pulse">Hi, I'm Ramesh Kumar</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mb-8">A passionate Frontend Web Developer turning ideas into reality with code.</p>
+      <a href="#projects" class="bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-3 rounded-full font-bold shadow-lg hover:scale-110 transition">🚀 View My Work</a>
+
+      <!-- Lottie Animation -->
+      <div class="absolute bottom-10 w-28 h-28">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" loop autoplay aria-label="Scroll down animation"></lottie-player>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 fade-up">
+      <div class="max-w-4xl mx-auto glass p-10 rounded-2xl shadow-2xl">
+        <h2 class="text-4xl font-bold text-center text-gradient mb-8">About Me</h2>
+        <p class="text-gray-300 text-lg leading-relaxed mb-6 text-center">I am in my third year of BSc IT at SIES College. Passionate about Web Development, Design, and Technology. Previously served as Digital Head at EDIT.ITFEST and won awards in design competitions.</p>
+
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Education</h3>
+        <ul class="list-disc list-inside text-gray-300 mb-8 space-y-1">
+          <li>BSc IT (SIES College, 2023-2026): CGPA 7.27 (~69.1%)</li>
+          <li>HSC (2022-2023): 52.5%</li>
+          <li>SSC (2020-2021): 68.6%</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Certificates</h3>
+        <ul class="list-disc list-inside text-gray-300 space-y-1">
+          <li>Web Development - freeCodeCamp</li>
+          <li>Data Analyst - Elewayte</li>
+          <li>Digital Marketing - ReferIndia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 fade-up">
+      <h2 class="text-4xl font-bold text-center text-gradient mb-12">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass p-6 rounded-xl hover:scale-105 transition-transform shadow-xl">
+          <h3 class="text-2xl font-bold text-cyan-400 mb-2">Portfolio Website</h3>
+          <p class="text-gray-300 mb-4">My personal portfolio with responsive design and smooth animations.</p>
+          <a href="portfolio_ramesh/index.html" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+        <div class="glass p-6 rounded-xl hover:scale-105 transition-transform shadow-xl">
+          <h3 class="text-2xl font-bold text-cyan-400 mb-2">Juicy Delights</h3>
+          <p class="text-gray-300 mb-4">Fruit shop website with clean UI, animations, and responsive layout.</p>
+          <a href="fruits/fruit.html" class="text-cyan-400 hover:underline">View Project →</a>
+        </div>
+        <div class="glass p-6 rounded-xl hover:scale-105 transition-transform shadow-xl">
+          <h3 class="text-2xl font-bold text-cyan-400 mb-2">Stone Paper Scissor</h3>
+          <p class="text-gray-300 mb-4">A fun interactive game built with HTML, CSS, and JavaScript where users can play against the computer.</p>
+          <a href="PS.html" class="text-cyan-400 hover:underline">Play Game →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 fade-up">
+      <div class="max-w-5xl mx-auto glass p-10 rounded-2xl shadow-2xl">
+        <h2 class="text-4xl font-bold text-gradient text-center mb-8">Undergraduate Student</h2>
+
+        <!-- Header -->
+        <div class="text-center mb-6">
+          <h1 class="text-cyan-400 font-semibold">Ramesh Kumar</h1>
+          <p class="text-gray-300">📞 9653384822 | ✉️ nadarrameshkumar12@gmail.com | 📍 Matunga, Mumbai - 400019</p>
+        </div>
+
+        <!-- Objective -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Objective</h3>
+        <p class="text-gray-300 mb-6">Motivated and adaptable IT undergraduate with strong communication and organizational skills. Skilled at problem-solving, multitasking, and leading group projects. A proactive team player with experience in mentoring peers and managing tasks efficiently. Resourceful, eager to learn, and passionate about applying technical and analytical knowledge to real-world challenges.</p>
+
+     
+        <!-- Interests -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Interests</h3>
+        <p class="text-gray-300 mb-6">MS Excel, MS Word, PowerPoint, C Programming, C++, Core Java, Python, DBMS, HTML & CSS, JavaScript, Power BI, Canva Editing</p>
+
+        <!-- Skills & Abilities -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Skills & Abilities</h3>
+        <ul class="text-gray-300 mb-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <li class="flex items-center gap-2"><i data-lucide="clock"></i> Time Management</li>
+          <li class="flex items-center gap-2"><i data-lucide="puzzle"></i> Problem Solving</li>
+          <li class="flex items-center gap-2"><i data-lucide="trending-up"></i> Self Motivation</li>
+          <li class="flex items-center gap-2"><i data-lucide="users"></i> Leadership</li>
+        </ul>
+
+        <!-- Languages -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Languages</h3>
+        <p class="text-gray-300 mb-6">English (Upper intermediate), Hindi (Upper intermediate), Tamil (Intermediate)</p>
+
+        <!-- Hobbies -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Hobbies</h3>
+        <p class="text-gray-300 mb-6">Knowledge of AI, Creating page layouts, Photo & Video editing, Adobe After Effects, Adobe Lightroom, HD Photography</p>
+
+        <!-- Technical Skills -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Technical Skills</h3>
+        <ul class="text-gray-300 mb-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <li class="flex items-center gap-2"><i class="devicon-java-plain colored text-2xl"></i> Java</li>
+          <li class="flex items-center gap-2"><i class="devicon-c-plain colored text-2xl"></i> C</li>
+          <li class="flex items-center gap-2"><i class="devicon-cplusplus-plain colored text-2xl"></i> C++</li>
+          <li class="flex items-center gap-2"><i class="devicon-html5-plain colored text-2xl"></i> HTML</li>
+          <li class="flex items-center gap-2"><i class="devicon-css3-plain colored text-2xl"></i> CSS</li>
+          <li class="flex items-center gap-2"><i class="devicon-javascript-plain colored text-2xl"></i> JavaScript</li>
+          <li class="flex items-center gap-2"><i class="devicon-mysql-plain colored text-2xl"></i> MySQL</li>
+          <li class="flex items-center gap-2"><i class="devicon-vscode-plain colored text-2xl"></i> VS Code</li>
+        </ul>
+
+        <!-- Certifications -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Certifications</h3>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6">
+          <li>Introduction to Web Development – freeCodeCamp.org</li>
+          <li>Data Analyst Internship – Elewayte</li>
+          <li>Digital Marketing & Web Development Internship – ReferIndia</li>
+        </ul>
+
+        <!-- Declaration -->
+        <h3 class="text-2xl font-semibold text-cyan-400 mb-2">Declaration</h3>
+        <p class="text-gray-300">I hereby declare that the information mentioned above is true to the best of my knowledge.</p>
+        <p class="text-gray-400 text-sm mt-2">Place: Mumbai<br>Signature: Ramesh Kumar Nadar</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 fade-up">
+      <div class="max-w-2xl mx-auto glass p-10 rounded-2xl shadow-2xl text-center">
+        <h2 class="text-4xl font-bold text-gradient mb-6">Get In Touch</h2>
+        <p class="text-gray-300 mb-6">I'm open to new opportunities. Let's connect!</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4 flex-wrap">
+          <a href="mailto:nadarrameshkumar12@gmail.com" class="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-full font-bold hover:scale-110 transition flex items-center gap-2">📩 Email Me</a>
+          <a href="https://github.com/Rameshnrk80" target="_blank" class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full font-bold flex items-center gap-2 transition"><i data-lucide="github"></i> GitHub</a>
+          <a href="https://instagram.com/ramesh_rk_7" target="_blank" class="bg-pink-600 hover:bg-pink-500 px-6 py-3 rounded-full font-bold flex items-center gap-2 transition"><i data-lucide="instagram"></i> Instagram</a>
+          <a href="MY_RESUME -2.pdf" class="glass px-6 py-3 rounded-full font-bold hover:bg-gray-700 transition flex items-center gap-2">📄 Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-gray-500">© 2024 Ramesh Kumar. All rights reserved.</footer>
+
+  <!-- Animation Script -->
+  <script>
+    // Fade-up effect
+    const elements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+
+    // Particles background
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const numParticles = 80;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 2 + 1;
+        this.dx = (Math.random() - 0.5) * 1;
+        this.dy = (Math.random() - 0.5) * 1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = 'rgba(6,182,212,0.7)';
+        ctx.fill();
+      }
+      update() {
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
+
+        this.draw();
+      }
+    }
+
+    function init() {
+      particles = [];
+      for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => p.update());
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+
+    // Load icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
